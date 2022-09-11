@@ -1,0 +1,7 @@
+name = "bhstats"
+main = "./index.ts"
+compatibility_date = "2022-09-11"
+
+kv_namespaces = [
+  { binding = "DATA_KV", id = "e83995fdc7b64d3eb355334d70550834", preview_id = "e83995fdc7b64d3eb355334d70550834" }
+]
