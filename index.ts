@@ -1,12 +1,13 @@
 import { ZodError } from "zod";
 import { Environment, ReceivedBody, ReceivedBodySchema, StatsObject, StatsObjectSchema } from "./types";
 
-const KV_STATS = '{"totalGuilds":2,"totalChannels":111,"totalMembers":129179,"totalStatsSent":3,"lastUpdated":{"date":"Sun, 11 Sep 2022 10:19:53 GMT","timestampMilliseconds":1662891593340,"timestampSeconds":1662891593}}';
+const KV_STATS = '{"totalGuilds":255,"totalChannels":6804,"totalMembers":125701,"totalStatsSent":9577,"lastUpdated":{"date":"Thu, 08 Jan 2026 13:52:10 GMT","timestampMilliseconds":1767880330999,"timestampSeconds":1767880330}}';
 
 export default {
     async fetch(request: Request, env: Environment): Promise<Response> {
 
         if (request.method === "POST") {
+            return new Response("API disabled.", { status: 405 });
 
             // IF API-KEY is not correct, return
             if (request.headers.get("API-KEY") !== env.API_KEY) {
